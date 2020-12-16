@@ -15,7 +15,7 @@ Develop a data model for a university that can handle all data related to studen
 
 * [X] Relationships between them
 
- List all courses faculty person A has taught
+List all courses faculty person A has taught
 
 1. [X] ``sql
 
@@ -31,12 +31,11 @@ SELECT * FROM Enrollment WHERE Student_ID = 'B';
 
 * [X] Solution diagram
 
- Write SQL queries to answer the following:
+Write SQL queries to answer the following:
 
 * [X] *See: question_1.sql*: Compute the pass rate for each course last semester and order them by pass rate descending
 * [X] *See: question_2.sql* : For all students in their fourth year, check if they have taken courses worth of 20 credits in the department associated with their major
 * [X] *See: question_3.sql:* Write a query that enrolls a student in a class
-
 
 # Solution
 
@@ -77,3 +76,9 @@ SELECT * FROM Enrollment WHERE Student_ID = 'B';
 * Inserted some data into the students table using `./sql/data_insrts.sql`
 * Connected to the DB using `./code/connect.py`
 * In directory `./sql`there are files: `question_1.sql, question_2.sql, and question_3.sql` which have the solutions for the last 3 questions.
+
+## Corrections
+
+* Majors should be directly related to Departments.
+* A Many to one relation, Major to Department.
+* Enables changes(adds/removals) to departments to be easily integrated with Majors table.
